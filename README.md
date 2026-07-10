@@ -124,6 +124,24 @@ A interface acadêmica utiliza dados simulados para demonstrar filtros, estatís
 
 ---
 
+## Deploy no Streamlit Community Cloud
+
+Para publicar o projeto manualmente no Streamlit Community Cloud, utilize as seguintes configurações:
+
+- Repositório: https://github.com/Fredson-Alves/amapa-politico-monitor
+- Branch: main
+- Main file path: src/amapa_politico_monitor/ui/app.py
+
+Instruções resumidas:
+
+1. Acesse o Streamlit Community Cloud e escolha "New app".
+2. Selecione o repositório acima e a branch main.
+3. Defina o caminho do arquivo principal como src/amapa_politico_monitor/ui/app.py.
+4. Mantenha o projeto sem secrets ou chaves de API e confirme que a interface roda apenas com dados mockados.
+5. Publique o app e valide a interface após o deploy.
+
+---
+
 ## Estrutura do Projeto
 
 ```text

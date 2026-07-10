@@ -9,4 +9,6 @@ pandas>=2.2.2
 python-dateutil>=2.9.0
 loguru>=0.7.2
 PyYAML>=6.0.2
+streamlit>=1.40.0
 pytest>=8.2.2
+-e .
