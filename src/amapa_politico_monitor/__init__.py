@@ -1,25 +1,38 @@
-"""Pacote principal do projeto Amapá Político Monitor."""
+"""Amapá Político Monitor."""
 
-try:
-    from crewai import Agent, Crew, Process, Task
-except ImportError:  # pragma: no cover - fallback para ambientes sem CrewAI
-    class Agent:
-        def __init__(self, **kwargs):
-            self.__dict__.update(kwargs)
+from __future__ import annotations
 
-    class Task:
-        def __init__(self, **kwargs):
-            self.__dict__.update(kwargs)
-
-    class Crew:
-        def __init__(self, **kwargs):
-            self.__dict__.update(kwargs)
-
-        def kickoff(self):
-            return None
-
-    class Process:
-        sequential = "sequential"
+__version__ = "1.0.0"
 
 
-__all__ = ["Agent", "Task", "Crew", "Process"]
+class Agent:
+    """Stub leve para compatibilidade sem CrewAI."""
+
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+
+
+class Task:
+    """Stub leve para compatibilidade sem CrewAI."""
+
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+
+
+class Crew:
+    """Stub leve para compatibilidade sem CrewAI."""
+
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+
+    def kickoff(self):
+        return None
+
+
+class Process:
+    """Stub leve para compatibilidade sem CrewAI."""
+
+    sequential = "sequential"
+
+
+__all__ = ["__version__", "Agent", "Task", "Crew", "Process"]

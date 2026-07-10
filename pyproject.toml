@@ -7,7 +7,7 @@ name = "amapa-politico-monitor"
 version = "1.0.0"
 description = "Sistema multiagente para monitoramento de notícias políticas do Estado do Amapá utilizando CrewAI."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 license = { text = "MIT" }
 
 authors = [

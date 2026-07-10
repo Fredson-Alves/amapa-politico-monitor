@@ -24,3 +24,21 @@ def test_streamlit_app_module_can_be_imported() -> None:
         sys.path.pop(0)
 
     assert hasattr(module, "main")
+
+
+def test_package_init_does_not_import_crewai_and_newsitem_still_imports() -> None:
+    root = Path(__file__).resolve().parents[1]
+    sys.path.insert(0, str(root / "src"))
+
+    try:
+        package = importlib.import_module("amapa_politico_monitor")
+        news_item_module = importlib.import_module("amapa_politico_monitor.models.news_item")
+    finally:
+        sys.path.pop(0)
+
+    assert package.__version__ == "1.0.0"
+    assert hasattr(package, "Agent")
+    assert hasattr(package, "Crew")
+    assert hasattr(package, "Process")
+    assert hasattr(package, "Task")
+    assert hasattr(news_item_module, "NewsItem")
